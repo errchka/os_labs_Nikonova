@@ -1,0 +1,6 @@
+Hello world.
+Another line;
+INVALID: This is bad
+INVALID: 
+INVALID: 
+INVALID: o
