@@ -11,11 +11,11 @@ pipe1. Процесс child проверяет строки на валидно�
 Вариант 16) Правило проверки: строка должна оканчиваться на «.» или «;»
 
 ## Как скомпилировать?
-gcc -Wall -Wextra -o parent parent.c\n
-gcc -Wall -Wextra -o child  child.c\n
-./parent\n
+gcc -Wall -Wextra -o parent parent.c  
+gcc -Wall -Wextra -o child  child.c  
+./parent  
 ### Выведется: Enter file name:  
-"ваше имя файла".txt
-"Ваши предложения"
-Ctrl + D
-Результат будет находиться в указанном файле!
+"ваше имя файла".txt  
+"Ваши предложения"  
+Ctrl + D  
+Результат будет находиться в указанном файле!  
