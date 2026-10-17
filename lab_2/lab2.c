@@ -70,10 +70,10 @@ static void *worker(void *arg) {
 static double run_parallel(uint64_t N, int nthreads, uint64_t seed, uint64_t *out_in) {
     mc_ctx c = {0};
     c.total_points = N;
-    c.chunk        = 1 << 16;
-    c.next_chunk   = 0;
+    c.chunk = 1 << 16;
+    c.next_chunk = 0;
     c.inside_total = 0;
-    c.seed_base    = seed | 1;
+    c.seed_base = seed | 1;
 
     if (pthread_mutex_init(&c.mtx, NULL) != 0) {
         fprintf(stderr, "pthread_mutex_init failed\n");
@@ -157,15 +157,15 @@ static void run_sweep(uint64_t N, double R, const int *ps, int np, double T_seq)
     print_sep(w, 4);
 }
 int main(int argc, char **argv) {
-    double   R           = 1.0;
-    uint64_t N           = 100000000ULL;
-    int      nthreads    = 4;
-    int      max_threads = 1024;
+    double R = 1.0;
+    uint64_t N = 100000000ULL;
+    int nthreads = 4;
+    int max_threads = 1024;
 
-    int do_sweep = 1;                                         // ← дефолт
-    int sweep_ps[16] = {1, 2, 3, 4, 16, 128, 1024};           // ← дефолт
-    int sweep_np = 7;                                         // ← дефолт
-    int verbose = 0;                                          // ← если делали --verbose
+    int do_sweep = 1;                                        
+    int sweep_ps[16] = {1, 2, 3, 4, 16, 128, 1024};           
+    int sweep_np = 7;                                       
+    int verbose = 0;                                          
 
     for (int i = 1; i < argc; ++i) {
         if      (!strcmp(argv[i], "--radius")      && i+1<argc) R = atof(argv[++i]);
