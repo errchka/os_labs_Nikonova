@@ -168,9 +168,9 @@ int main(int argc, char **argv) {
     int verbose = 0;                                          
 
     for (int i = 1; i < argc; ++i) {
-        if      (!strcmp(argv[i], "--radius")      && i+1<argc) R = atof(argv[++i]);
-        else if (!strcmp(argv[i], "--points")      && i+1<argc) N = strtoull(argv[++i], 0, 10);
-        else if (!strcmp(argv[i], "--threads")     && i+1<argc) nthreads = atoi(argv[++i]);
+        if      (!strcmp(argv[i], "--radius") && i+1<argc) R = atof(argv[++i]);
+        else if (!strcmp(argv[i], "--points") && i+1<argc) N = strtoull(argv[++i], 0, 10);
+        else if (!strcmp(argv[i], "--threads") && i+1<argc) nthreads = atoi(argv[++i]);
         else if (!strcmp(argv[i], "--max-threads") && i+1<argc) max_threads = atoi(argv[++i]);
         else if (!strcmp(argv[i], "--verbose") || !strcmp(argv[i], "-v")) verbose = 1;
         else if (!strcmp(argv[i], "--no-sweep")) do_sweep = 0;
